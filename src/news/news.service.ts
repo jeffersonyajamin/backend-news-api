@@ -9,15 +9,11 @@ import { ManagerHttpService } from '../manager-service/services/management-http.
 export class NewsService {
   constructor(private managerHttpService: ManagerHttpService) {}
 
-  async find() {
-    const news = await this.getPrebookingDataCache();
+  async find(items) {
+    const news = await this.managerHttpService.get(
+      `https://newsapi.org/v2/everything?q=${items.q}`,
+    );
     console.log(news);
     return news;
-  }
-
-  private getPrebookingDataCache(): Promise<any> {
-    return this.managerHttpService.get(
-      `https://newsapi.org/v2/everything?q=apple`,
-    );
   }
 }

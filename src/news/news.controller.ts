@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { NewsService } from './news.service';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 
@@ -9,7 +9,8 @@ export class NewsController {
   @Get('find')
   @ApiOperation({ summary: 'Find news' })
   @ApiResponse({ status: 201, description: 'News founded.' })
-  getNews() {
-    return this.newsService.find();
+  getNews(@Query() items: any) {
+    console.log(items);
+    return this.newsService.find(items);
   }
 }
