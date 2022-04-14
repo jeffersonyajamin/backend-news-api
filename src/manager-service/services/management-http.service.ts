@@ -1,7 +1,7 @@
 import { HttpException, Injectable } from '@nestjs/common';
 import { firstValueFrom } from 'rxjs';
 import { HttpService } from '@nestjs/axios';
-import { AppConfigService } from 'src/configuration/configuration.service';
+import { AppConfigService } from '../../configuration/configuration.service';
 
 @Injectable()
 export class ManagerHttpService {

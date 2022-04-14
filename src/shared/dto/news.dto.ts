@@ -7,11 +7,11 @@ export class NewsSearchDtoReq {
   readonly search: string;
   @ApiProperty({})
   @IsOptional()
-  readonly from: string;
+  readonly from?: string;
   @ApiProperty({})
   @IsOptional()
-  readonly to: string;
+  readonly to?: string;
   @ApiProperty({})
   @IsOptional()
-  readonly sortBy: string;
+  readonly sortBy?: string;
 }

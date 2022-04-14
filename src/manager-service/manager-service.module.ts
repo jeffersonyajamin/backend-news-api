@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
-import { AppConfigModule } from 'src/configuration/configuration.module';
+import { AppConfigModule } from '../configuration/configuration.module';
 import { ManagerHttpService } from './services/management-http.service';
 
 @Module({
