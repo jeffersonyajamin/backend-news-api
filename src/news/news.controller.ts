@@ -11,7 +11,6 @@ export class NewsController {
   @ApiOperation({ summary: 'Find news search' })
   @ApiResponse({ status: 201, description: 'News founded.' })
   getNewsFilter(@Query() items: NewsSearchDtoReq) {
-    console.log(items);
     return this.newsService.findNews(items);
   }
 }

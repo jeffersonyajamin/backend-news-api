@@ -15,4 +15,7 @@ export class AppConfigService {
   get API_KEY(): string {
     return this.configService.get<string>('news-app.API_KEY');
   }
+  get BASE_URL(): string {
+    return this.configService.get<string>('news-app.BASE_URL');
+  }
 }
